@@ -1,0 +1,10 @@
+<div class="card" style="width: 800px">
+  <div class="card-body">
+    <ngb-carousel #announcemementCarousel keyboard="true" style="outline: none" interval="1000" pauseOnHover="true"
+      [showNavigationIndicators]="false" [showNavigationArrows]="true">
+      <ng-template ngbSlide *ngFor="let announcement of announcements;let i=index" id="{{'announcement-' + i}}">
+        <p>Announcement {{i+1}} of {{announcements.length}}: {{announcement.text}}</p>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
