@@ -5,8 +5,9 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
-    "build:docker": "docker build --rm -f .docker/dev.dockerfile -t ngb-carousel:latest .",
-    "docker:run": "docker run --rm -d -p 80:80/tcp ngb-carousel:latest",
+    "build:docker": "docker build --rm -f .docker/dev.dockerfile -t rajeshreddykalam/ngb-carousel:latest .",
+    "docker:run": "docker run --rm -d -p 80:80/tcp rajeshreddykalam/ngb-carousel:latest",
+    "docker:publish": "docker login -u=rajeshreddykalam && docker push rajeshreddykalam/ngb-carousel:latest",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
